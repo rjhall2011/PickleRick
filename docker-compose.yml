@@ -1,0 +1,27 @@
+version: "3"
+services:
+  # API/App config
+  app:
+    build: .
+    command: npm run dev
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/src
+    links:
+      - db
+    depends_on:
+      - db
+  # database config
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: dockerExpressDemo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
