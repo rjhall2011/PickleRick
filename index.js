@@ -19,3 +19,5 @@ syncModels().then((_) => {
 async function syncModels() {
   await User.sync({ alter: true });
 }
+
+

@@ -1,7 +1,7 @@
 {
-  "name": "dockerbuilding",
+  "name": "RicknMortyAPI",
   "version": "1.0.0",
-  "description": "a project to experiment with docker in an express/node project",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
