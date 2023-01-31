@@ -6,6 +6,9 @@ services:
     command: npm run dev
     environment:
       - PORT=3000
+      - DB_NAME=dockerExpressDemo
+      - JWT_SECRET=secrect
+      - JWT_ISSUER=RIckandMortyAPI
     ports:
       - 3000:3000
     volumes:
